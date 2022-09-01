@@ -1,2 +1,2 @@
 #!/bin/bash
-find . '*.html' -exec cp -vunr '{}' ".."
+cp -u ./*.html ../
