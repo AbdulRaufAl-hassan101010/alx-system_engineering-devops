@@ -1,1 +1,1 @@
-VARIABLES
+Learn redirections
