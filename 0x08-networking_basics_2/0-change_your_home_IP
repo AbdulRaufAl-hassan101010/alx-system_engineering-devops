@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script adds IP address to /etc/hosts
+resolves -s localhost
+127.0.0.2
+resolves -s facebook.com
+8.8.8.8
