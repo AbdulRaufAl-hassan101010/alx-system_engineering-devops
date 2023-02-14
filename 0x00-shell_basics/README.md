@@ -1,3 +1,1 @@
-#SCRIPTING
-
-pwd - displays present working directory
+The switched user
