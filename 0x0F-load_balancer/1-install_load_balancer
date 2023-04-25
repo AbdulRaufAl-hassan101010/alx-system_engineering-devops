@@ -2,4 +2,24 @@
 
 # Install HAproxy
 apt-get update
-apt-get
+apt-get -y install haproxy
+
+# Configure HAproxy to balance load between web-01 and web-02
+echo "
+frontend http
+    bind *:80
+    mode http
+    default_backend webservers
+
+backend webservers
+    mode http
+    balance roundrobin
+    option httpchk GET /
+    server 103883-web-01 100.25.163.241:80 check
+    server 103883-web-02 34.239.207.138:80 check" > /etc/haproxy/haproxy.cfg
+
+# Configure init script
+sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
+
+# Restart HAproxy
+systemctl restart haproxy
