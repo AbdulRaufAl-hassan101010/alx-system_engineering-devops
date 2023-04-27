@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Set variables
+DB_USER=root
+DB_PASSWORD=$1
+DATE=$(date '+%d-%m-%Y')
+FILENAME="backup-$DATE.tar.gz"
+
+# Clean up backup.sql
+rm /home/$USER/backup.sql
+
+
+# Dump all databases to backup.sql
+mysqldump --user=$DB_USER --password=$DB_PASSWORD --all-databases > /home/$USER/backup.sql
+
+# Compress backup.sql to tar.gz archive with the date as filename
+tar -czvf /home/$USER/$FILENAME /home/$USER/backup.sql
+
