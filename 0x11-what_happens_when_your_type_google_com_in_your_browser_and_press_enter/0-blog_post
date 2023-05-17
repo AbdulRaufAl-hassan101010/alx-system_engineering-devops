@@ -1,0 +1,30 @@
+Title: The Journey of a Web Request: Exploring "https://www.google.com"
+
+Introduction:
+In this blog post, we will delve into the fascinating journey of a web request when you type "https://www.google.com" in your browser and hit Enter. We will unravel the key components and processes involved, such as DNS requests, TCP/IP, firewalls, HTTPS/SSL, load balancers, web servers, application servers, and databases. Join us as we embark on this enlightening exploration!
+
+DNS Request:
+The journey begins with a DNS request. Your browser sends a request to a DNS resolver, which queries authoritative DNS servers to obtain the IP address for "www.google.com."
+
+TCP/IP:
+Using the IP address, your browser establishes a TCP connection with Google's web server. TCP ensures reliable data transmission by creating a connection-oriented session between the client (your browser) and the server.
+
+Firewall:
+The connection may pass through a firewall, which filters network traffic to protect the server from unauthorized access or potential threats. The firewall checks if the request complies with predefined rules and policies.
+
+HTTPS/SSL:
+Once the TCP connection is established, your browser initiates a secure communication channel using HTTPS. This protocol utilizes SSL/TLS encryption to ensure data confidentiality, integrity, and authenticity.
+
+Load Balancer:
+In high-traffic scenarios, load balancers are employed. They distribute incoming requests across multiple servers to optimize performance, prevent overload, and maintain high availability. The load balancer forwards your request to one of Google's web servers.
+Web Server:
+The web server receives your HTTPS request and retrieves the requested resources, such as HTML, CSS, JavaScript files, or images, from storage or cache. It generates a response containing the requested data and sends it back to your browser via the TCP connection.
+
+Application Server:
+The web server may communicate with an application server to process dynamic content or execute server-side code. The application server handles complex tasks such as database operations, business logic, or user authentication, generating data or performing necessary actions for the response.
+
+Database:
+If data retrieval or storage is required, the web server or application server interacts with a database. The database stores structured information needed to fulfill the request, such as indexed web pages, search history, or user preferences.
+
+Conclusion:
+We have explored the journey of a web request from typing "https://www.google.com" to hitting Enter. By understanding the steps involved—DNS requests, TCP/IP connections, firewalls, HTTPS/SSL encryption, load balancers, web servers, application servers, and databases—we gain insights into the intricate mechanisms powering the web. This knowledge allows us to appreciate the complexity behind every web page we access.
